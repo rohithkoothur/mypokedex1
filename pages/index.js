@@ -13,7 +13,7 @@ export default function Home() {
   const fetchProcess=()=>{
   
     fetch('https://pokeapi.co/api/v2/pokemon')
-    .then((resp:Response)=>resp.json())
+    .then((resp,Response)=>resp.json())
     .then(data=>{
       console.log(data.results);
       setPokemon(data.results);
