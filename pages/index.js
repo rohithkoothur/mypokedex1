@@ -49,12 +49,13 @@ useEffect(()=>{
 
   
         {pokemon?.map((p)=>
+        // eslint-disable-next-line react/jsx-key
         <div>
           <button onClick={() => setpokemon(p.name)}>{p.name}</button> 
         </div>
         
         )}
-        <h1>Selected Pokemon:::{selectedpokemon}</h1>
+        <h1>Selected Pokemon ::{selectedpokemon}</h1>
               </main>
 
       
