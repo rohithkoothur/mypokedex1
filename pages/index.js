@@ -86,6 +86,7 @@ useEffect(()=>{
 
 
         {pokemon?.sprites && (
+            // eslint-disable-next-line @next/next/no-img-element
             <img src={pokemon.sprites.front_default} />
           )}
 
@@ -94,6 +95,7 @@ useEffect(()=>{
 
             {pokemon.types.map((t)=>{
              
+              // eslint-disable-next-line react/jsx-key
               return <li>{t.type.name}</li> 
               
 
