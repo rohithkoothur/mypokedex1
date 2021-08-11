@@ -81,7 +81,32 @@ useEffect(()=>{
         
 
         <h1>{pokemon?.name}</h1>
+        
+
+
+
+        {pokemon?.sprites && (
+            <img src={pokemon.sprites.front_default} />
+          )}
+
+{pokemon.types?.length > 0 && (
+          <ul>
+
+            {pokemon.types.map((t)=>{
+             
+              return <li>{t.type.name}</li> 
+              
+
+
+            }
+            
+            )}
+
+          </ul>
+        )}
         <div>
+
+          
 
           
 
