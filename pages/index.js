@@ -37,11 +37,11 @@ useEffect(()=>{
       <main >
         <div >
 
-      <div id="search-box" className="bg-primary p-2">
+      <div id="search-box" style={{backgroundColor:"blue",height:"55px"}}>
 			<div className="row m-0">
 					<div className="col-sm-3 text-center p-3">
 					</div>
-					<div className="col-md-9">
+					<div style={{marginLeft:"25px"}}>
 							<form className="mb-0  d-flex justify-content-center align-items-center h-100 w-100" >
 								<div>
 									<input id="search_name" type="text" 
