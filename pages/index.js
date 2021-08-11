@@ -40,7 +40,6 @@ useEffect(()=>{
       <div id="search-box" className="bg-primary p-2">
 			<div className="row m-0">
 					<div className="col-sm-3 text-center p-3">
-							<img src="./pokemon_logo.png" className="w-100" style={{background: 'blue'}}/>
 					</div>
 					<div className="col-md-9">
 							<form className="mb-0  d-flex justify-content-center align-items-center h-100 w-100" onsubmit="search_pokemon(); return false">
