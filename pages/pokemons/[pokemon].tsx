@@ -1,7 +1,7 @@
 
 import { Response } from "../../../../../AppData/Local/Microsoft/TypeScript/4.3/node_modules/@types/node-fetch";
 
-const PokemonPage = ({name,pokemon,error})=>{
+const PokemonPage = ({pokemon,error})=>{
 
  
 
