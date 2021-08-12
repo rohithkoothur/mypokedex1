@@ -51,7 +51,7 @@ useEffect(()=>{
             
 					
           
-					<div style={{marginLeft:"600px"}}>
+					<div style={{marginLeft:"px"}}>
 							<form className="mb-0  d-flex justify-content-center align-items-center h-100 w-100" >
 								<div>
 									<input id="search_name" type="text" 
