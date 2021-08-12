@@ -6,7 +6,7 @@ const PokemonPage = ({name,pokemon,error})=>{
 
     return error ?
 
-    <div><h1>Pokemon Not FOund</h1></div>:
+    <div><h1>Pokemon Not Found</h1></div>:
     
     <div>
     
