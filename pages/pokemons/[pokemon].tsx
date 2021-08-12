@@ -1,4 +1,4 @@
-
+import Image from 'next/image'
 
 const PokemonPage = ({name,pokemon,error})=>{
 
@@ -6,7 +6,10 @@ const PokemonPage = ({name,pokemon,error})=>{
 
     return error ?
 
-    <div><h1>Pokemon Not Found</h1></div>:
+    <div><h1>Pokemon Not Found</h1>
+    
+    
+    </div>:
     
     <div>
     

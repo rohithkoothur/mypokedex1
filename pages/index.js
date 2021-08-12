@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css'
+import logo from '../images/logo.png'
+
 
 
 export default function Home() {
@@ -36,13 +38,20 @@ useEffect(()=>{
 
       <main >
         <div >
+          
 
       <div id="search-box" style={{backgroundColor:"blue",height:"55px"}}>
-			<div className="row m-0">
-					<div className="col-sm-3 text-center p-3">
-					</div>
+      <Image src={logo}
+      height="60px"
+       width="250px"
+       alt="logo" 
+        
+        />
           
-					<div style={{marginLeft:"750px"}}>
+            
+					
+          
+					<div style={{marginLeft:"600px",marginTop:"-50px"}}>
 							<form className="mb-0  d-flex justify-content-center align-items-center h-100 w-100" >
 								<div>
 									<input id="search_name" type="text" 
@@ -78,8 +87,7 @@ useEffect(()=>{
 					</div>
 			</div>
 		</div>
-</div>
-        
+
 
         <h1>{pokemon?.name}</h1>
         
