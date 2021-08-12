@@ -41,7 +41,8 @@ useEffect(()=>{
 			<div className="row m-0">
 					<div className="col-sm-3 text-center p-3">
 					</div>
-					<div style={{marginLeft:"25px"}}>
+          
+					<div style={{marginLeft:"750px"}}>
 							<form className="mb-0  d-flex justify-content-center align-items-center h-100 w-100" >
 								<div>
 									<input id="search_name" type="text" 
@@ -83,13 +84,11 @@ useEffect(()=>{
         <h1>{pokemon?.name}</h1>
         
 
-
-
         {pokemon?.sprites && (
-            // eslint-disable-next-line @next/next/no-img-element
+            
             <img src={pokemon.sprites.front_default} />
           )}
-
+  
 {pokemon.types?.length > 0 && (
           <ul>
 
@@ -106,15 +105,7 @@ useEffect(()=>{
 
           </ul>
         )}
-        <div>
-
-          
-
-          
-
-
-
-        </div>
+        
 
      
 
