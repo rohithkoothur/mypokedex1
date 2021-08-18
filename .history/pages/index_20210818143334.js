@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.css'
 import logo from '../images/logo.png'
 import styled from '@emotion/styled'
 import { jsx, css } from '@emotion/react'
-
+import { renderToString } from 'react-dom/server'
 
 
 
@@ -17,44 +17,14 @@ export default function Home() {
   const [selectedpokemon,setpokemon] =useState(null);
   const [query,setQuery]=useState('');
   const Button = styled.button`
-  color: orange;
+    color: orange
+    
+    `
+
+    const base = css`
+  color: hotpink;
 `
-
-const Button1 = styled.button`
-  color: ${props =>
-    props.primary ? 'hotpink' : 'turquoise'};
-`
-
-const Section = styled.section`
-  background: #333;
-  color: #fff;
-  width: 150px
-`
-const Aside = Section.withComponent('aside')
-const H1 = styled.h1(
-  {
-    fontSize: 20
-  },
-  props => ({ color: props.color })
-)
-
-const dynamicStyle = props =>
-  css`
-    color: ${props.color};
-  `
-
-const Container = styled.div`
-  ${dynamicStyle};
-`
-
-const Example = styled('span')`
-  color: orange;
-  & > a {
-    color: blue;
-  }
-`
-
-
+  
 
   
   
@@ -172,29 +142,7 @@ useEffect(()=>{
 
 
                </div>
-               <div>
-    <Button>Click Here</Button>
-    <br/>
-    <Button1>Rohith</Button1>
-    <br/>  
-    <br/>
-    <br/>
-    <Section>This is a section</Section>
-    <br />
-    <Aside>This is an aside</Aside>
-
-    <br />
-    <br /><br />
-    <H1 color="orange">Orange text Testing </H1>
-    
-    <Container color="blue">
-    Blue color dynamic style testing
-  </Container>
-  <Example>
-    This is orange <a>and this is blue</a>.
-  </Example>
-
-    </div>
+               <Button>Sample Styled Button</Button>
 
 
 

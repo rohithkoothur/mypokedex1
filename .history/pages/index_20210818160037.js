@@ -172,29 +172,7 @@ useEffect(()=>{
 
 
                </div>
-               <div>
-    <Button>Click Here</Button>
-    <br/>
-    <Button1>Rohith</Button1>
-    <br/>  
-    <br/>
-    <br/>
-    <Section>This is a section</Section>
-    <br />
-    <Aside>This is an aside</Aside>
-
-    <br />
-    <br /><br />
-    <H1 color="orange">Orange text Testing </H1>
-    
-    <Container color="blue">
-    Blue color dynamic style testing
-  </Container>
-  <Example>
-    This is orange <a>and this is blue</a>.
-  </Example>
-
-    </div>
+               <Button>Sample Styled Button</Button>
 
 
 

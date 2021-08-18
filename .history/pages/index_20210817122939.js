@@ -9,7 +9,6 @@ import { jsx, css } from '@emotion/react'
 
 
 
-
 export default function Home() {
 
 
@@ -17,44 +16,8 @@ export default function Home() {
   const [selectedpokemon,setpokemon] =useState(null);
   const [query,setQuery]=useState('');
   const Button = styled.button`
-  color: orange;
-`
-
-const Button1 = styled.button`
-  color: ${props =>
-    props.primary ? 'hotpink' : 'turquoise'};
-`
-
-const Section = styled.section`
-  background: #333;
-  color: #fff;
-  width: 150px
-`
-const Aside = Section.withComponent('aside')
-const H1 = styled.h1(
-  {
-    fontSize: 20
-  },
-  props => ({ color: props.color })
-)
-
-const dynamicStyle = props =>
-  css`
-    color: ${props.color};
-  `
-
-const Container = styled.div`
-  ${dynamicStyle};
-`
-
-const Example = styled('span')`
-  color: orange;
-  & > a {
-    color: blue;
-  }
-`
-
-
+    color: blue`
+  
 
   
   
@@ -166,45 +129,16 @@ useEffect(()=>{
 
               </main>
               <br/>
-             <div>
+              <div
+    css={css`
+      ${base};
+      background-color: #eee;
+    `}
+  >
+    This is hotpink.
+  </div>
 
-               <div>
-
-
-               </div>
-               <div>
-    <Button>Click Here</Button>
-    <br/>
-    <Button1>Rohith</Button1>
-    <br/>  
-    <br/>
-    <br/>
-    <Section>This is a section</Section>
-    <br />
-    <Aside>This is an aside</Aside>
-
-    <br />
-    <br /><br />
-    <H1 color="orange">Orange text Testing </H1>
-    
-    <Container color="blue">
-    Blue color dynamic style testing
-  </Container>
-  <Example>
-    This is orange <a>and this is blue</a>.
-  </Example>
-
-    </div>
-
-
-
-
-
-
-
-
-
-             </div>
+              <Button>Sample Button Test For emotion styled component</Button>
               
     </div>
   )
