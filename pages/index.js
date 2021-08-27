@@ -31,9 +31,9 @@ export default function Home() {
 
             <div className="avatar">
 
-            <div class="input-group">
-            <div class="input-group rounded">
-  <input type="search" class="form-control rounded"  placeholder="Pokemon Name Here" 
+            <div className="input-group">
+            <div className="input-group rounded">
+  <input type="search" className="form-control rounded"  placeholder="Pokemon Name Here" 
   value={query}
     onChange={(e)=>{
       console.log(e.currentTarget.value)
@@ -44,7 +44,7 @@ export default function Home() {
     
     />
     <div style={{color: "blue"}}>""</div>
-  <span class="input-group-text border-0" id="search-addon">
+  <span className="input-group-text border-0" id="search-addon">
     
    <div className="searchbtn"> <i className="fas fa-search" onClick={(e)=>{
                     e.preventDefault();
@@ -84,7 +84,7 @@ export default function Home() {
 
    {pokemon?.name &&
         
-        <div class="alert alert-info" role="alert">
+        <div className="alert alert-info" role="alert">
  <h1>Search Result : {pokemon.name.toUpperCase()}</h1>
 </div>
         
