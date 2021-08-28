@@ -1,7 +1,11 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
+import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react'
+import Electric from '../components/Electric'
+import SearchTypes from '../components/SearchTypes'
 import logo from '../images/logo.png'
 
 import { center, gridContainer, gridItem, imagestyle, Types } from '../styles/mystyles'
@@ -13,8 +17,11 @@ import { center, gridContainer, gridItem, imagestyle, Types } from '../styles/my
 export default function Home() {
 
   const [pokemon, putPokemon]= useState( []);
+  
+  const [type, putType]= useState( []);
   const [selectedpokemon,setpokemon] =useState(null);
   const [query,setQuery]=useState('');
+  const [typebtn,setTypebtn]=useState('');
   const [state,setState]=useState(1)
 
   return (
@@ -185,8 +192,7 @@ export default function Home() {
 }
 
 
-
-
+<SearchTypes/>
 
 
 
