@@ -31,6 +31,7 @@ const Details =({ninja})=>{
         {
             ninja.pokemon.map((t)=>{
                 return(
+                    // eslint-disable-next-line react/jsx-key
                     <h1>{t.pokemon.name}</h1>
                 )
             })
