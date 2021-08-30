@@ -1,4 +1,13 @@
+import Link from "next/link"
+import { useState } from "react"
+import Head from 'next/head'
+import Electric from "../../components/Electric"
+import { Types } from "../../styles/mystyles"
+
+
+
 export const getStaticPaths =async ()=>{
+    
     const res = await fetch('https://pokeapi.co/api/v2/type')
     const data = await res.json()
     const paths= data.results.map(ninja=>{
@@ -25,17 +34,45 @@ export const getStaticProps =async (context) =>{
     }
 }
 const Details =({ninja})=>{
+    
+    
     return(
         <div>
-        
-        {
-            ninja.pokemon.map((t)=>{
-                return(
-                    // eslint-disable-next-line react/jsx-key
-                    <h1>{t.pokemon.name}</h1>
-                )
-            })
-        }
+        <Types>{ninja.name.toUpperCase()} Pokemons</Types>
+     
+
+<ul className="list-group">
+
+            {ninja.pokemon.map((t)=>{
+             
+              // eslint-disable-next-line react/jsx-key
+              return( <div>
+              
+              
+              <li className="list-group-item">
+                  
+
+                  {<h3><Link href={"/pokemons/"+t.pokemon.name}><a>{t.pokemon.name}</a></Link></h3>}
+                      
+                      </li> 
+
+
+                      
+                      
+                      </div>
+                      
+                      
+                      )
+              
+
+            }
+            
+            )}
+
+
+          </ul>
+          
+         
 
         
         </div>

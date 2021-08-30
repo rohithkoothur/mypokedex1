@@ -1,5 +1,5 @@
 import Image from 'next/image'
-
+import { center, Types } from "../../styles/mystyles"
 const PokemonPage = ({name,pokemon,error})=>{
 
  
@@ -13,20 +13,34 @@ const PokemonPage = ({name,pokemon,error})=>{
     
     <div>
     
+<Types>{pokemon.name.toUpperCase()}</Types>
 
-    {pokemon?.sprites && (
-            
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={pokemon.sprites.front_default} />
-          )}
-
+<center>          
+<table><tr>
+  
+  <td>
+  <img src={pokemon.sprites.front_default} />
+  <img src={pokemon.sprites.front_female} />
+  <img src={pokemon.sprites.front_shiny} />
+  <img src={pokemon.sprites.front_shiny_female} />
+  <img src={pokemon.sprites.back_default} />
+  <img src={pokemon.sprites.back_female} />
+  <img src={pokemon.sprites.back_shiny} />
+  <img src={pokemon.sprites.back_shiny_female} />
+  
+  
+  </td>
+  
+  </tr></table>
+  </center>
+<center><Types>Types</Types></center>
 {pokemon?.types?.length > 0 && (
-          <ul>
+          <center><table><tr>
 
             {pokemon.types.map((t)=>{
              
               // eslint-disable-next-line react/jsx-key
-              return <li>{t.type.name}</li> 
+              return <td>{t.type.name}</td> 
               
 
 
@@ -34,9 +48,24 @@ const PokemonPage = ({name,pokemon,error})=>{
             
             )}
 
-          </ul>
+          </tr></table></center>
         )}
-    
+    <Types>Abilites</Types>
+<center>
+          <ul className="list-group">
+
+            {pokemon.abilities.map((t)=>{
+             
+              // eslint-disable-next-line react/jsx-key
+              return <li className="list-group-item">{t.ability.name.toUpperCase()}</li> 
+              
+
+            }
+            
+            )}
+
+
+          </ul></center>
         
 
     </div> 

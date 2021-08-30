@@ -44,3 +44,7 @@ export const center = styled.div`
 text-align: center;
 `
 
+export const ulcss = styled.div`
+
+border-style: solid;
+`
