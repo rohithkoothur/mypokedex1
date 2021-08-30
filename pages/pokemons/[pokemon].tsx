@@ -33,9 +33,10 @@ const PokemonPage = ({name,pokemon,error})=>{
   
   </tr></table>
   
-<center><Types>Types</Types></center>
+<Types>Types</Types>
 {pokemon?.types?.length > 0 && (
-          <center><table><tr>
+         
+         <table><tr>
 
             {pokemon.types.map((t)=>{
              
@@ -48,10 +49,10 @@ const PokemonPage = ({name,pokemon,error})=>{
             
             )}
 
-          </tr></table></center>
+          </tr></table>
         )}
     <Types>Abilites</Types>
-<center>
+
           <ul className="list-group">
 
             {pokemon.abilities.map((t)=>{
@@ -65,7 +66,7 @@ const PokemonPage = ({name,pokemon,error})=>{
             )}
 
 
-          </ul></center>
+          </ul>
         
 
     </div> 
