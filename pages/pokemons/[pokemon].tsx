@@ -15,7 +15,7 @@ const PokemonPage = ({name,pokemon,error})=>{
     
 <Types>{pokemon.name.toUpperCase()}</Types>
 
-<center>          
+         
 <table><tr>
   
   <td>
@@ -32,7 +32,7 @@ const PokemonPage = ({name,pokemon,error})=>{
   </td>
   
   </tr></table>
-  </center>
+  
 <center><Types>Types</Types></center>
 {pokemon?.types?.length > 0 && (
           <center><table><tr>
