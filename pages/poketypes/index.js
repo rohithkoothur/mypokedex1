@@ -10,7 +10,7 @@ export const getServerSideProps =async ()=>{
 }
 
 
-const types=({ninjas})=>{
+const poketypes=({ninjas})=>{
     return(
         <div>
         
@@ -42,4 +42,4 @@ const types=({ninjas})=>{
 
 }
 
-export default types
+export default poketypes
