@@ -11,6 +11,7 @@ const Testing =({types})=>{
             {
         types.results.map(type=>{
             return(
+                // eslint-disable-next-line react/jsx-key
                 <div >
 
                     <h1>{type.name}</h1>
