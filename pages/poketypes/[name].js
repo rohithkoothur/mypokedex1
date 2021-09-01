@@ -3,6 +3,7 @@ import { useState } from "react"
 import Head from 'next/head'
 import Electric from "../../components/Electric"
 import { Types } from "../../styles/mystyles"
+import NavBar from "../../components/NavBar"
 
 
 

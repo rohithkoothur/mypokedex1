@@ -13,6 +13,7 @@ const PokemonPage = ({name,pokemon,error})=>{
     </div>:
     
     <div>
+      
     
 <Types>{pokemon.name.toUpperCase()}</Types>
 

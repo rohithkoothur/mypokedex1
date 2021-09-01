@@ -3,6 +3,8 @@ import { useState } from "react"
 import Head from 'next/head'
 import Electric from "../../components/Electric"
 import { Types } from "../../styles/mystyles"
+import NavBar from "../../components/NavBar"
+import SearchTypes from "../../components/SearchTypes"
 
 
 
@@ -20,6 +22,9 @@ const Details =({ninja})=>{
     
     return(
         <div>
+            <NavBar/>
+            <SearchTypes/>
+            <br/>
         <Types>{ninja.name.toUpperCase()} Pokemons</Types>
      
 
@@ -29,6 +34,7 @@ const Details =({ninja})=>{
              
               // eslint-disable-next-line react/jsx-key
               return( <div>
+                  
               
               
               <li className="list-group-item">
