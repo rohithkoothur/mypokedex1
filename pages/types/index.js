@@ -3,25 +3,25 @@ export const getServerSideProps =async ()=>{
     const res = await fetch('https://pokeapi.co/api/v2/type')
     const data = await res.json()
     return{
-        props :{ninjas : data}
+        props :{pokemons : data}
     }
 
     
 }
 
 
-const types=({ninjas})=>{
+const types=({pokemons})=>{
     return(
         <div>
         
         {
-            ninjas.results.map((ninja)=>{
+            pokemons.results.map((pokemon)=>{
                 return (
                // eslint-disable-next-line react/jsx-key
                <div>
-                   <Link href={"/types/"+ninja.name}  key={ninja.name}>
+                   <Link href={"/types/"+pokemon.name}  key={pokemon.name}>
                        <a>
-                   <h3>{ninja.name}</h3></a>
+                   <h3>{pokemon.name} </h3><hr/></a>
 
                    </Link>
                    

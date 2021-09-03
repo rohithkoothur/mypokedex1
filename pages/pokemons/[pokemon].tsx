@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 import { center, Types } from "../../styles/mystyles"
+import NavBar from '../../components/NavBar'
 const PokemonPage = ({name,pokemon,error})=>{
 
  
@@ -13,6 +14,7 @@ const PokemonPage = ({name,pokemon,error})=>{
     </div>:
     
     <div>
+      <NavBar/>
       
     
 <Types>{pokemon.name.toUpperCase()}</Types>
