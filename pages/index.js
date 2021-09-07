@@ -17,10 +17,16 @@ import { center, gridContainer, gridItem, imagestyle, Types } from '../styles/my
 
 
 
+
+
+
 export default function Home() {return(
   <div>
     <NavBar/>
     <SearchTypes/>
+   
+    
   </div>
 )
 }
+
