@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
 import Link from 'next/link'
 import Image from 'next/image'
 import kohli from '../images/testimage.png'
@@ -82,7 +81,6 @@ const EPtypes = ({ pokemons, pokemontypes,pokes}) => {
                                             types.name
                                             
                                             }
-                                            // eslint-disable-next-line @next/next/no-img-element
                                             <img className="posters" src={pokemons.sprites.front_default} />
 
                                         </div>
