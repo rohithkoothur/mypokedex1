@@ -5,7 +5,7 @@ import kohli from '../images/testimage.png'
 import NavBar from '../components/NavBar'
 import SearchTypes from '../components/SearchTypes'
 import { center } from '../styles/mystyles'
-import Testingpage from './Testingpage'
+
 import fetch from 'node-fetch'
 export const getServerSideProps = async () => {
 
