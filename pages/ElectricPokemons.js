@@ -18,7 +18,7 @@ export const getServerSideProps = async () => {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/mew`)
     const data = await res.json()
 
-    const res3 = await fetch('https://pokeapi.co/api/v2/pokemon')
+    const res3 = await fetch('https://pokeapi.co/api/v2/pokemon?limit=10218')
     const data3 = await res3.json()
 
 
@@ -39,12 +39,20 @@ export const getServerSideProps = async () => {
     const data6 = data5.pokemon.map(myname=>{
         return (
             myname.pokemon.name
+
             
         )
     })
 
     const normalpokemons = data4.filter(function(n) { return data6.indexOf(n) !== -1;})
-             console.log(normalpokemons)
+            
+    const normalpokemons1 =normalpokemons.map(t=>{
+        return (
+            fetch
+        )
+    })
+
+
 
 
     return {
@@ -52,6 +60,7 @@ export const getServerSideProps = async () => {
             pokemons: data,
             pokemontypes: data2,
             data4,
+            data5,
             data6,
             normalpokemons
            
@@ -62,7 +71,7 @@ export const getServerSideProps = async () => {
 }
 
 
-const EPtypes = ({ pokemons, pokemontypes,data4,data6,normalpokemons}) => {
+const EPtypes = ({ pokemons, pokemontypes,data4,data6,normalpokemons,data5}) => {
 
 
     
@@ -88,14 +97,7 @@ const EPtypes = ({ pokemons, pokemontypes,data4,data6,normalpokemons}) => {
             
             <br />
             {
-              console.log(data4),
-              console.log(data6),
-              console.log(normalpokemons)
-              
 
-              
-              
-                
             }
             
             <br />
@@ -113,22 +115,28 @@ const EPtypes = ({ pokemons, pokemontypes,data4,data6,normalpokemons}) => {
                     <div className='posters' >
 
                         {
-                            normalpokemons.map((name, index) => {
+                            data5.pokemon.map((name, index) => {
                                 return (
+                                    
                                     <div key={name}>
+                                         
+                                        
                                         
                                         <div className='titt' >
                                         
 
 
                                             {
-
-                                           name
+                                              
+                                             
+                                           name.pokemon.name
+                                          
+                                           
                                             
                                             }
-                                            <img className="posters" src={pokemons.sprites.front_default} />
+                                            <img className="posters" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${name.pokemon.url.slice(34,-1)}.png`} />
 
-                                        </div>
+                                            </div>
                                         
 
                                     </div>
@@ -292,11 +300,7 @@ const EPtypes = ({ pokemons, pokemontypes,data4,data6,normalpokemons}) => {
 
 
 
-            {
-                pokemontypes.results.map(type => {
-
-                })
-            }
+            
         </div>
     )
 
