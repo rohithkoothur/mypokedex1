@@ -5,32 +5,56 @@ import kohli from '../images/testimage.png'
 import NavBar from '../components/NavBar'
 import SearchTypes from '../components/SearchTypes'
 import { center } from '../styles/mystyles'
+import { useState } from 'react'
 
 import fetch from 'node-fetch'
+import { data } from 'browserslist'
 export const getServerSideProps = async () => {
-
-
-
-    const res3 = await fetch(`https://pokeapi.co/api/v2/pokemon`)
-    const data3 = await res3.json()
 
     const res2 = await fetch('https://pokeapi.co/api/v2/type')
     const data2 = await res2.json()
-    
 
-    
-
-
-
-
+   
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/mew`)
     const data = await res.json()
+
+    const res3 = await fetch('https://pokeapi.co/api/v2/pokemon')
+    const data3 = await res3.json()
+
+
+
+   
+
+    const data4 = data3.results.map(pokemonname=>{
+        return (
+            
+            pokemonname.name
+            
+        )
+    })
+
+    const res5 = await fetch(`https://pokeapi.co/api/v2/type/normal`)
+    const data5 = await res5.json()
+    
+    const data6 = data5.pokemon.map(myname=>{
+        return (
+            myname.pokemon.name
+            
+        )
+    })
+
+    const normalpokemons = data4.filter(function(n) { return data6.indexOf(n) !== -1;})
+             console.log(normalpokemons)
+
 
     return {
         props: {
             pokemons: data,
             pokemontypes: data2,
-            pokes: data3
+            data4,
+            data6,
+            normalpokemons
+           
             
 
         }
@@ -38,48 +62,68 @@ export const getServerSideProps = async () => {
 }
 
 
-const EPtypes = ({ pokemons, pokemontypes,pokes}) => {
+const EPtypes = ({ pokemons, pokemontypes,data4,data6,normalpokemons}) => {
+
+
+    
     var pokename = []
+    function handle() {
+             
+             
+
+
+
+    }
     
 
     return (
         
         <div >
 
+            
+
             <NavBar />
             <SearchTypes />
+            
+            
             <br />
+            {
+              console.log(data4),
+              console.log(data6),
+              console.log(normalpokemons)
+              
 
+              
+              
+                
+            }
+            
             <br />
-            <div className='row'>
+            <div className='row' onLoad={handle()}>
                 <hr />
-                <h2>Electric Pokemons</h2>
+                <h2>Normal Pokemons</h2>
+                
+
+
+
                 <hr />
 
 
                 {pokemons?.sprites && (
-                    <div className='posters'>
+                    <div className='posters' >
 
                         {
-                            pokemontypes.results.map((types, index) => {
+                            normalpokemons.map((name, index) => {
                                 return (
-                                    <div key={types.name}>
-                                        <div>
-                                            
-                                        </div>
-                                    
-
+                                    <div key={name}>
                                         
-
-
                                         <div className='titt' >
                                         
 
 
-
                                             {
 
-                                            types.name
+                                           name
                                             
                                             }
                                             <img className="posters" src={pokemons.sprites.front_default} />
