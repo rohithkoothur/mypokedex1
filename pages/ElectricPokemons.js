@@ -29,10 +29,6 @@ export const getServerSideProps = async () => {
 const EPtypes = ({normaltype,electrictype}) => {
 
 
-    
-   
-    
-
     return (
         
         <div >
@@ -60,7 +56,7 @@ const EPtypes = ({normaltype,electrictype}) => {
                                          
                                         
                                         
-                                         <Link href={`pokemons/${name.pokemon.name}`}><a>         <div className='titt' >
+                                         <Link href={`/pokemons/${name.pokemon.name}`}><a>   <div className='titt' >
                                         
 
 
