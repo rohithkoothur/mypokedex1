@@ -87,7 +87,7 @@ const Ntypes = ({normaltype}) => {
                         }
 
      
-                    </div>)}
+                    </div>)
             </div>
 
 
